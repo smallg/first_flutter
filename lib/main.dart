@@ -1,76 +1,55 @@
 import 'package:flutter/material.dart';
-import 'package:first_flutter/tabs/first.dart';
-import 'package:first_flutter/tabs/second.dart';
-import 'package:first_flutter/tabs/third.dart';
+import 'model/post.dart';
 
-void main() {
-    runApp(new MaterialApp(
-        debugShowCheckedModeBanner: false,
-        // Title
-        title: "Using Tabs",
-        // Home
-        theme: new ThemeData(
-            primarySwatch: Colors.green,
-            accentColor: Colors.lightGreenAccent,
-            backgroundColor: Colors.black12
-        ),
-        home: new MyHome()));
+void main() => runApp(App());
+
+class App extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Home(),
+      theme: ThemeData(
+        primarySwatch: Colors.yellow
+      )
+    );
+  }
 }
 
-class MyHome extends StatefulWidget {
-    @override
-    MyHomeState createState() => new MyHomeState();
-}
+class Home extends StatelessWidget {
+  Widget _listItemBuilder(BuildContext context, int index) {
+    return Container(
+      color: Colors.white,
+      margin: EdgeInsets.all(8.0),
+      child:Column(
+        children: <Widget>[
+          Image.network(posts[index].imageUrl),
+          SizedBox(height: 16.0),
+          Text(
+            posts[index].title,
+            style:Theme.of(context).textTheme.title
+          ),
+          Text(
+            posts[index].title,
+            style:Theme.of(context).textTheme.subhead
+          )
+        ],
+      )
+    );
+  }
 
-// SingleTickerProviderStateMixin is used for animation
-class MyHomeState extends State<MyHome> with SingleTickerProviderStateMixin {
-    // Create a tab controller
-    TabController controller;
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.grey[100],
+      appBar: AppBar(
+        title: Text('Home'),
+        elevation: 0.0,
+      ),
+      body: ListView.builder(
+        itemCount: posts.length,
+        itemBuilder: _listItemBuilder
 
-    @override
-    void initState() {
-        super.initState();
-
-        // Initialize the Tab Controller
-        controller = new TabController(length: 3, vsync: this);
-    }
-
-    @override
-    void dispose() {
-        // Dispose of the Tab Controller
-        controller.dispose();
-        super.dispose();
-    }
-
-    @override
-    Widget build(BuildContext context) {
-        return new Scaffold(
-            body: new TabBarView(
-                children: <Widget>[new FirstTab(), new SecondTab(), new ThirdTab()],
-                controller: controller,
-            ),
-            bottomNavigationBar: new Material(
-                color: Colors.green,
-                child: new TabBar(
-                    tabs: <Tab>[
-                        new Tab(
-                            // set icon to the tab
-                            icon: new Icon(Icons.favorite),
-                            text: 'First',
-                        ),
-                        new Tab(
-                            icon: new Icon(Icons.adb),
-                            text: 'Second',
-                        ),
-                        new Tab(
-                            icon: new Icon(Icons.airport_shuttle),
-                            text: 'Third',
-                        ),
-                    ],
-                    // setup the controller
-                    controller: controller,
-                ),
-            ),
-        );
-    }
+      )
+    );
+  }
 }
