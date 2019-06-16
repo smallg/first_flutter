@@ -24,11 +24,6 @@ class Home extends StatelessWidget {
         child: Scaffold(
           backgroundColor: Colors.grey[100],
           appBar: AppBar(
-              leading: IconButton(
-                  icon: Icon(Icons.menu),
-                  tooltip: 'Navigration',
-                  onPressed: () =>
-                      {debugPrint('Navigration button is pressed!')}),
               title: Text('Home X'),
               actions: <Widget>[
                 IconButton(
@@ -57,25 +52,32 @@ class Home extends StatelessWidget {
           ),
           drawer: Drawer(
               child: ListView(
-                children: <Widget>[
-                  DrawerHeader(
-                    child: Text('header'.toUpperCase()),
-                    decoration: BoxDecoration(color: Colors.grey[100]),
-                  ),
-                  ListTile(
-                      title: Text('Message', textAlign: TextAlign.right),
-                      trailing: Icon(Icons.message,
-                          color: Colors.black12, size: 22.0)),
-                  ListTile(
-                      title: Text('Favorite', textAlign: TextAlign.right),
-                      trailing: Icon(Icons.favorite,
-                          color: Colors.black12, size: 22.0)),
-                  ListTile(
-                      title: Text('Settings', textAlign: TextAlign.right),
-                      trailing: Icon(Icons.settings,
-                          color: Colors.black12, size: 22.0))
-                ],
-              )),
+            children: <Widget>[
+              UserAccountsDrawerHeader(
+                accountName: Text('xxxxx', style: TextStyle(fontWeight: FontWeight.bold)),
+                accountEmail: Text('sxss@222.com'),
+                currentAccountPicture: CircleAvatar(backgroundImage: NetworkImage('https://avatars3.githubusercontent.com/u/225962?s=460&v=4'),),
+              ),
+              ListTile(
+                title: Text('Message', textAlign: TextAlign.right),
+                trailing:
+                    Icon(Icons.message, color: Colors.black12, size: 22.0),
+                onTap: () => {Navigator.pop(context)},
+              ),
+              ListTile(
+                title: Text('Favorite', textAlign: TextAlign.right),
+                trailing:
+                    Icon(Icons.favorite, color: Colors.black12, size: 22.0),
+                onTap: () => {Navigator.pop(context)},
+              ),
+              ListTile(
+                title: Text('Settings', textAlign: TextAlign.right),
+                trailing:
+                    Icon(Icons.settings, color: Colors.black12, size: 22.0),
+                onTap: () => {Navigator.pop(context)},
+              )
+            ],
+          )),
         ));
   }
 }
