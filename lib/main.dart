@@ -54,9 +54,22 @@ class Home extends StatelessWidget {
               child: ListView(
             children: <Widget>[
               UserAccountsDrawerHeader(
-                accountName: Text('xxxxx', style: TextStyle(fontWeight: FontWeight.bold)),
+                accountName: Text('xxxxx',
+                    style: TextStyle(fontWeight: FontWeight.bold)),
                 accountEmail: Text('sxss@222.com'),
-                currentAccountPicture: CircleAvatar(backgroundImage: NetworkImage('https://avatars3.githubusercontent.com/u/225962?s=460&v=4'),),
+                currentAccountPicture: CircleAvatar(
+                  backgroundImage: NetworkImage(
+                      'https://avatars3.githubusercontent.com/u/225962?s=460&v=4'),
+                ),
+                decoration: BoxDecoration(
+                    // color: Colors.yellow[400],
+                    image: DecorationImage(
+                        image: NetworkImage(
+                            'https://ss1.bdstatic.com/kvoZeXSm1A5BphGlnYG/skin/320.jpg?2'),
+                        fit: BoxFit.cover,
+                        colorFilter: ColorFilter.mode(
+                            Colors.yellow[400].withOpacity((0.6)),
+                            BlendMode.hardLight))),
               ),
               ListTile(
                 title: Text('Message', textAlign: TextAlign.right),
