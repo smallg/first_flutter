@@ -28,7 +28,6 @@ dev_dependencies:
     flutter_test:
         sdk: flutter
     css_colors: ^1.0.0
-    url_launcher: ^0.4.1
 
 # For information on the generic Dart part of this file, see the
 # following page: https://www.dartlang.org/tools/pub/pubspec
