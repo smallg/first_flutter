@@ -10,3 +10,6 @@ Run project
 - Run App
 #flutter run
 ```
+
+- VSCode
+#fn+F5
