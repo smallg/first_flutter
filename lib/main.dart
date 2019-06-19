@@ -3,6 +3,7 @@ import 'package:first_flutter/demo/bottom_navigator.dart';
 import 'package:first_flutter/demo/drawer.dart';
 import 'package:first_flutter/demo/layout_demo.dart';
 import 'package:first_flutter/demo/listview-demo.dart';
+import 'package:first_flutter/demo/sliver_demo.dart';
 import 'package:first_flutter/demo/view_demo.dart';
 import 'package:flutter/material.dart';
 
@@ -14,6 +15,7 @@ class App extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Home(),
+        // home: SliverDemo(),
         theme: ThemeData(
             primarySwatch: Colors.deepPurple,
             highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
@@ -54,7 +56,8 @@ class Home extends StatelessWidget {
               ListViewDemo(),
               BasicDemo(),
               LayoutDemo(),
-              ViewDemo(),
+              SliverDemo(),
+              // ViewDemo(),
               // RichTextDemo(),
               // Icon(Icons.change_history, size: 128.0, color: Colors.black12),
             ],
