@@ -1,6 +1,7 @@
 import 'package:first_flutter/demo/basic_demo.dart';
 import 'package:first_flutter/demo/bottom_navigator.dart';
 import 'package:first_flutter/demo/drawer.dart';
+import 'package:first_flutter/demo/form_demo.dart';
 import 'package:first_flutter/demo/layout_demo.dart';
 import 'package:first_flutter/demo/listview_demo.dart';
 import 'package:first_flutter/demo/navigator_demo.dart';
@@ -13,19 +14,22 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        // home: Home(),
-        // home: NavigatorDemo(),
-        // home: SliverDemo(),
-        initialRoute: '/',
-        routes: {
-          '/': (context) => Home(),
-          '/about': (context) => Page(title: 'About')
-        },
-        theme: ThemeData(
-            primarySwatch: Colors.deepPurple,
-            highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
-            splashColor: Colors.white70));
+      debugShowCheckedModeBanner: false,
+      // home: Home(),
+      // home: NavigatorDemo(),
+      // home: SliverDemo(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => Home(),
+        '/about': (context) => Page(title: 'About'),
+        '/form': (context) => FormDemo(),
+      },
+      theme: ThemeData(
+          primarySwatch: Colors.deepPurple,
+          highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
+          splashColor: Colors.white70,
+          accentColor: Color.fromRGBO(3, 54, 255, 1.0)),
+    );
   }
 }
 
