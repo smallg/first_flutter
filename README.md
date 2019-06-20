@@ -13,3 +13,4 @@ Run project
 
 - VSCode
 #fn+F5
+#fn+^+F5
