@@ -4,6 +4,7 @@ import 'package:first_flutter/demo/drawer.dart';
 import 'package:first_flutter/demo/form_demo.dart';
 import 'package:first_flutter/demo/layout_demo.dart';
 import 'package:first_flutter/demo/listview_demo.dart';
+import 'package:first_flutter/demo/material_components.dart';
 import 'package:first_flutter/demo/navigator_demo.dart';
 import 'package:first_flutter/demo/sliver_demo.dart';
 import 'package:flutter/material.dart';
@@ -18,11 +19,12 @@ class App extends StatelessWidget {
       // home: Home(),
       // home: NavigatorDemo(),
       // home: SliverDemo(),
-      initialRoute: '/',
+      initialRoute: '/mdc',
       routes: {
         '/': (context) => Home(),
         '/about': (context) => Page(title: 'About'),
         '/form': (context) => FormDemo(),
+        '/mdc': (context) => MaterialComponents(),
       },
       theme: ThemeData(
           primarySwatch: Colors.deepPurple,
