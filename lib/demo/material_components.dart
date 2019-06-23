@@ -1,4 +1,6 @@
 import 'package:first_flutter/demo/button_demo.dart';
+import 'package:first_flutter/demo/checkbox_demo.dart';
+import 'package:first_flutter/demo/form_demo.dart';
 import 'package:first_flutter/demo/popup_menu_button.dart';
 import 'package:flutter/material.dart';
 
@@ -12,6 +14,14 @@ class MaterialComponents extends StatelessWidget {
       ),
       body: ListView(
         children: <Widget>[
+          ListItem(
+            title: 'Checkbox',
+            page: CheckboxDemo(),
+          ),
+          ListItem(
+            title: 'Form',
+            page: FormDemo(),
+          ),
           ListItem(
             title: 'PopupMenuButton',
             page: PopupMenuButtonDemo(),
