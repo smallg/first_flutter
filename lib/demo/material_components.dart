@@ -7,6 +7,7 @@ import 'package:first_flutter/demo/datetime_demo.dart';
 import 'package:first_flutter/demo/form_demo.dart';
 import 'package:first_flutter/demo/paginateddatetable_demo.dart';
 import 'package:first_flutter/demo/popup_menu_button.dart';
+import 'package:first_flutter/demo/stepper_demo.dart';
 import 'package:flutter/material.dart';
 
 class MaterialComponents extends StatelessWidget {
@@ -19,6 +20,10 @@ class MaterialComponents extends StatelessWidget {
       ),
       body: ListView(
         children: <Widget>[
+          ListItem(
+            title: 'Stepper',
+            page: StepperDemo(),
+          ),
           ListItem(
             title: 'Card',
             page: CardDemo(),
