@@ -1,4 +1,5 @@
 import 'package:first_flutter/demo/button_demo.dart';
+import 'package:first_flutter/demo/card_demo.dart';
 import 'package:first_flutter/demo/checkbox_demo.dart';
 import 'package:first_flutter/demo/chip_demo.dart';
 import 'package:first_flutter/demo/datetable_demo.dart';
@@ -18,6 +19,10 @@ class MaterialComponents extends StatelessWidget {
       ),
       body: ListView(
         children: <Widget>[
+          ListItem(
+            title: 'Card',
+            page: CardDemo(),
+          ),
           ListItem(
             title: 'Paginated DateTable',
             page: PaginatedDataTableDemo(),
