@@ -7,6 +7,7 @@ import 'package:first_flutter/demo/listview_demo.dart';
 import 'package:first_flutter/demo/material_components.dart';
 import 'package:first_flutter/demo/navigator_demo.dart';
 import 'package:first_flutter/demo/sliver_demo.dart';
+import 'package:first_flutter/demo/state_management_demo.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(App());
@@ -19,12 +20,13 @@ class App extends StatelessWidget {
       // home: Home(),
       // home: NavigatorDemo(),
       // home: SliverDemo(),
-      initialRoute: '/mdc',
+      initialRoute: '/state-management',
       routes: {
         '/': (context) => Home(),
         '/about': (context) => Page(title: 'About'),
         '/form': (context) => FormDemo(),
         '/mdc': (context) => MaterialComponents(),
+        '/state-management': (context) => StateManagementDemo(),
       },
       theme: ThemeData(
           primarySwatch: Colors.deepPurple,
