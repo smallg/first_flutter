@@ -8,6 +8,7 @@ import 'package:first_flutter/demo/material_components.dart';
 import 'package:first_flutter/demo/navigator_demo.dart';
 import 'package:first_flutter/demo/sliver_demo.dart';
 import 'package:first_flutter/demo/state_management_demo.dart';
+import 'package:first_flutter/demo/state_management_inheritedwidget_demo..dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(App());
@@ -27,6 +28,7 @@ class App extends StatelessWidget {
         '/form': (context) => FormDemo(),
         '/mdc': (context) => MaterialComponents(),
         '/state-management': (context) => StateManagementDemo(),
+        '/state-management-inherited-widget': (context) => StateManagementInheritedWidgetDemo(),
       },
       theme: ThemeData(
           primarySwatch: Colors.deepPurple,
