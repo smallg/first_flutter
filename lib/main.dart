@@ -9,6 +9,7 @@ import 'package:first_flutter/demo/navigator_demo.dart';
 import 'package:first_flutter/demo/sliver_demo.dart';
 import 'package:first_flutter/demo/state_management_demo.dart';
 import 'package:first_flutter/demo/state_management_inheritedwidget_demo..dart';
+import 'package:first_flutter/demo/stream/stream_demo.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(App());
@@ -21,14 +22,16 @@ class App extends StatelessWidget {
       // home: Home(),
       // home: NavigatorDemo(),
       // home: SliverDemo(),
-      initialRoute: '/state-management',
+      initialRoute: '/stream',
       routes: {
         '/': (context) => Home(),
         '/about': (context) => Page(title: 'About'),
         '/form': (context) => FormDemo(),
         '/mdc': (context) => MaterialComponents(),
         '/state-management': (context) => StateManagementDemo(),
-        '/state-management-inherited-widget': (context) => StateManagementInheritedWidgetDemo(),
+        '/state-management-inherited-widget': (context) =>
+            StateManagementInheritedWidgetDemo(),
+        '/stream': (context) => StreamDemo(),
       },
       theme: ThemeData(
           primarySwatch: Colors.deepPurple,
