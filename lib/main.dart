@@ -6,6 +6,7 @@ import 'package:first_flutter/demo/layout_demo.dart';
 import 'package:first_flutter/demo/listview_demo.dart';
 import 'package:first_flutter/demo/material_components.dart';
 import 'package:first_flutter/demo/navigator_demo.dart';
+import 'package:first_flutter/demo/rxdart/rxdart_demo.dart';
 import 'package:first_flutter/demo/sliver_demo.dart';
 import 'package:first_flutter/demo/state_management_demo.dart';
 import 'package:first_flutter/demo/state_management_inheritedwidget_demo..dart';
@@ -22,7 +23,7 @@ class App extends StatelessWidget {
       // home: Home(),
       // home: NavigatorDemo(),
       // home: SliverDemo(),
-      initialRoute: '/stream',
+      initialRoute: '/rxdart',
       routes: {
         '/': (context) => Home(),
         '/about': (context) => Page(title: 'About'),
@@ -32,6 +33,7 @@ class App extends StatelessWidget {
         '/state-management-inherited-widget': (context) =>
             StateManagementInheritedWidgetDemo(),
         '/stream': (context) => StreamDemo(),
+        '/rxdart': (context) => RxDartDemo(),
       },
       theme: ThemeData(
           primarySwatch: Colors.deepPurple,
