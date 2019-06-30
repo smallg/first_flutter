@@ -17,4 +17,6 @@ Run project
 
 short key
 stf
-stls
+sls   stateless with scaffold
+
+sfs  stateful with scaffold
