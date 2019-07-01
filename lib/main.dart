@@ -1,3 +1,4 @@
+import 'package:first_flutter/demo/animation/animation_demo.dart';
 import 'package:first_flutter/demo/basic_demo.dart';
 import 'package:first_flutter/demo/bloc/bloc_demo.dart';
 import 'package:first_flutter/demo/bottom_navigator.dart';
@@ -25,7 +26,7 @@ class App extends StatelessWidget {
       // home: Home(),
       // home: NavigatorDemo(),
       // home: SliverDemo(),
-      initialRoute: '/http',
+      initialRoute: '/animation',
       routes: {
         '/': (context) => Home(),
         '/about': (context) => Page(title: 'About'),
@@ -38,6 +39,7 @@ class App extends StatelessWidget {
         '/rxdart': (context) => RxDartDemo(),
         '/bloc': (context) => BlocDemo(),
         '/http': (context) => HttpDemo(),
+        '/animation': (context) => AnimationDemo(),
       },
       theme: ThemeData(
           primarySwatch: Colors.deepPurple,
