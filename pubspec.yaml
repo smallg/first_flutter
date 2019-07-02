@@ -27,10 +27,13 @@ dependencies:
     scoped_model: ^1.0.1
     rxdart: ^0.22.0
     http: ^0.12.0+2
+    flutter_localizations:
+        sdk: flutter
 
 dev_dependencies:
     flutter_test:
         sdk: flutter
+    intl_translation: ^0.17.5
     css_colors: ^1.0.0
 
 # For information on the generic Dart part of this file, see the

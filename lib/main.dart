@@ -5,6 +5,8 @@ import 'package:first_flutter/demo/bottom_navigator.dart';
 import 'package:first_flutter/demo/drawer.dart';
 import 'package:first_flutter/demo/form_demo.dart';
 import 'package:first_flutter/demo/http/http_demo.dart';
+import 'package:first_flutter/demo/i18n/i18n_demo.dart';
+import 'package:first_flutter/demo/i18n/map/demo_localiztions.dart';
 import 'package:first_flutter/demo/layout_demo.dart';
 import 'package:first_flutter/demo/listview_demo.dart';
 import 'package:first_flutter/demo/material_components.dart';
@@ -15,6 +17,7 @@ import 'package:first_flutter/demo/state_management_demo.dart';
 import 'package:first_flutter/demo/state_management_inheritedwidget_demo..dart';
 import 'package:first_flutter/demo/stream/stream_demo.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() => runApp(App());
 
@@ -22,11 +25,25 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      locale: Locale('zh', 'CN'),
+      // localeResolutionCallback:
+      //     (Locale locale, Iterable<Locale> supportedLocales) {
+      //   return Locale('en', 'US');
+      // },
+      localizationsDelegates: [
+        DemoLocalizationsDelegate(),
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      supportedLocales: [
+        Locale('en', 'US'),
+        Locale('zh', 'CN'),
+      ],
       debugShowCheckedModeBanner: false,
       // home: Home(),
       // home: NavigatorDemo(),
       // home: SliverDemo(),
-      initialRoute: '/animation',
+      initialRoute: '/i18n',
       routes: {
         '/': (context) => Home(),
         '/about': (context) => Page(title: 'About'),
@@ -40,6 +57,7 @@ class App extends StatelessWidget {
         '/bloc': (context) => BlocDemo(),
         '/http': (context) => HttpDemo(),
         '/animation': (context) => AnimationDemo(),
+        '/i18n': (context) => I18nDemo(),
       },
       theme: ThemeData(
           primarySwatch: Colors.deepPurple,
