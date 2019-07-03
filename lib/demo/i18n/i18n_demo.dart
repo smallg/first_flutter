@@ -1,4 +1,5 @@
-import 'package:first_flutter/demo/i18n/map/demo_localiztions.dart';
+// import 'package:first_flutter/demo/i18n/map/demo_localiztions.dart';
+import 'package:first_flutter/demo/i18n/intl/demo_localizations.dart';
 import 'package:flutter/material.dart';
 
 class I18nDemo extends StatelessWidget {
@@ -19,7 +20,7 @@ class I18nDemo extends StatelessWidget {
             ),
             Text(
               // Localizations.of(context, DemoLocations).title,
-              DemoLocations.of(context).title,
+              DemoLocalizations.of(context).greet('ninghao'),
               style: Theme.of(context).textTheme.title,
             )
           ],

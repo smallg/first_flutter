@@ -1,0 +1,17 @@
+{
+  "@@last_modified": "2019-07-03T19:22:21.270875",
+  "title": "你好",
+  "@title": {
+    "description": "国际化示例",
+    "type": "text",
+    "placeholders": {}
+  },
+  "greet": "你好 {name}",
+  "@greet": {
+    "description": "问候某人",
+    "type": "text",
+    "placeholders": {
+      "name": {}
+    }
+  }
+}
